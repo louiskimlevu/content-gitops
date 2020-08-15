@@ -1,0 +1,23 @@
+  
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  namespace: lasample
+  labels:
+    app: hello
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello
+        image: louiskimlevu/gitops:hello5fe4a31122c217a9e1f46a81f6a9293fd6c5b7fa
+        ports:
+        - containerPort: 80
