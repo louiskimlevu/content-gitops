@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: hello
-        image: louiskimlevu/gitops:hello-5a6a8031
+        image: linuxacademycontent/gitops:hello-v1.2
         ports:
         - containerPort: 80
